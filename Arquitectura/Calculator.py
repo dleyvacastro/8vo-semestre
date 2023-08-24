@@ -7,10 +7,13 @@ class Calculator:
         self.operator: bool = False
 
     def menu(self) -> None:
+        finished: bool = False
         while 1:
             if self.operator:
                 self.operator = False
-                self.alu.process_operator()
+                finished = self.alu.process_operator()
+                if finished:
+                    break
             else:
                 self.operator = True
                 self.alu.process_operand()
