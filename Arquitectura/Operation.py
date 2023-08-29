@@ -9,3 +9,7 @@ class Operation(ABC):
     @abstractmethod
     def calculate(self):
         pass
+
+    @abstractmethod
+    def validate(self):
+        pass
